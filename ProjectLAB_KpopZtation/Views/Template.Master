@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Template.master.cs" Inherits="ProjectLAB_KpopZtation.Views.Template" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style>
+        body {
+            background-color: #caf0f8;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: #FC8955;
+        }
+
+        .navbar-collapse {
+            justify-content: flex-end;
+        }
+
+        .container-fluid {
+            background-color: #caf0f8;
+        }
+
+        .navbar-nav .nav-link {
+            margin-right: 10px;
+        }
+
+        .navbar-nav {
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        .nav-item{
+            margin-right: 15px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">KPOP Ztation</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <asp:Button ID="HomeBTN" runat="server" Text="Home" OnClick="HomeBTN_Click" CssClass="btn btn-info" />
+                        </li>
+                        <li class="nav-item">
+                            <asp:Button ID="LoginBTN" runat="server" Text="Login" OnClick="LoginBTN_Click" CssClass="btn btn-info" />
+                        </li>
+                        <li class="nav-item">
+                            <asp:Button ID="RegisterBTN" runat="server" Text="Register" OnClick="RegisterBTN_Click" CssClass="btn btn-info" />
+                        </li>
+                        <li class="nav-item">
+                            <asp:Button ID="CartBTN" runat="server" Text="Cart" OnClick="CartBTN_Click" CssClass="btn btn-info" />
+                        </li>
+                        <li class="nav-item">
+                            <asp:Button ID="TransactionBTN" runat="server" Text="Transaction" OnClick="TransactionBTN_Click" CssClass="btn btn-info" />
+                        </li>
+                        <li class="nav-item">
+                            <asp:Button ID="UpdateProfileBTN" runat="server" Text="Update Profile" OnClick="UpdateProfileBTN_Click" CssClass="btn btn-info" />
+                        </li>
+                        <li class="nav-item">
+                            <asp:Button ID="LogoutBTN" runat="server" Text="Logout" OnClick="LogoutBTN_Click" CssClass="btn btn-info" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+
+        </div>
+
+    </form>
+</body>
+</html>
